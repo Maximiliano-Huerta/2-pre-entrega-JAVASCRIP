@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Chequeo de EPP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f9;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .equipo-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+        label {
+            flex: 1;
+            font-size: 18px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result, .history {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .history {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simulador de Chequeo de EPP</h1>
+    <div class="container">
+        <h2>Selecciona el EPP que llevas</h2>
+        <div id="equipo-list"></div>
+        <button id="verificar">Verificar EPP</button>
+        <div id="resultado" class="result"></div>
+        <h2>Historial</h2>
+        <div id="historial" class="history"></div>
+        <button id="limpiar-historial">Limpiar Historial</button>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
